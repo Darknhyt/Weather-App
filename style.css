@@ -1,0 +1,123 @@
+:root{
+    --comp: #386481;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(32, 29, 46);
+    color: aliceblue;
+    font-family: +'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 99svh;
+    margin: 0;
+}
+header{
+    background-color: var(--comp);
+    margin-inline: 0.8em;
+    padding: 0.6em;
+    display: flex;
+    justify-content: center;
+    width: clamp(400px,95%, 900px);
+}
+h1{
+    margin: auto;
+}
+h3{
+    margin-block: 0;
+}
+button{
+    background-color: aqua;
+    padding: 0.4em;
+    border: 2px inset darkblue;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+}
+body > div {
+    margin: 1em;
+    padding: 1.2em;
+    margin-bottom: 0;
+    width: clamp(400px,95%, 900px);
+}
+img{
+    visibility: hidden;
+    margin: 0;
+    padding: auto;
+}
+#input-box{
+    background-color: var(--comp);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box{
+    background-color: #333;
+    position: relative;
+    height: 440px;
+    padding: 10px;
+    width: clamp(400px,95%, 900px);
+}
+#screen{
+    background-color: #058cca;
+    background-image: url('./img/Sky_bg.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 400px;
+    padding: 2em;
+    
+}
+#screen > div {
+    visibility: hidden;
+    transition: visibility 1s;
+}
+
+.box-info{
+    background-color: rgba(31, 58, 49, 0.4);
+    padding: 1.4em;
+    width: fit-content;
+    text-shadow: 2px 0 0 black;
+}
+#current{
+    display: flex;
+    align-items: center;
+}
+#temp{
+    font-size: 2em;
+    margin: 0;
+}
+#location{
+   margin-block: 0.4em;
+}
+#zone{
+    position: absolute;
+    padding: 0.4em 1.4em;
+    bottom: 1em;
+    width: 90%;
+    display: flex;
+    background-color: #ff0000;
+    border-radius: 30px 2px;
+    z-index: 3;
+}
+#date {
+    background-color: #feffdb;
+    color: black;
+    height: 38px;
+    width: auto;
+    position: absolute;
+    bottom: 38px;
+    left: 30px;
+    padding: 0.8em;
+    margin-inline: auto;
+    border-radius: 20px 20px 0 0;
+    z-index: 2;
+}
+#loc{
+    max-width: 100%;
+    min-width: 400px;
+    border-radius: 5px;
+}
