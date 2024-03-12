@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bundle.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    
+    <div id="box">
+        <div id="screen">
+        <div id="info" class="box-info">
+            <h3 id="status"></h3>
+            <div id="current">
+                <img id="icon" src="#" alt="Weather icon status">
+                <span id="temp"></span>
+            </div>
+            <p id="current-minmax"></p>
+            <p id="rain"></p>
+            <p id="humidity"></p>
+        </div>
+        <div id="zone">
+            <h4 id="date">MONDAY 1 JANUARY</h4>
+            <h2 id="location">Waiting for Ubication</h2>
+        </div>
+        </div>
+    </div>
+    <div id="input-box">
+        <label for="loc">
+            Set location:
+            <input id="loc" name="region" type="text" minlength="3" maxlength="32" placeholder="City / Location / Country / Coordinates" autofocus required>
+        </label>
+        <button id="btn" type="button">INFO</button>
+    
+</div>
+</body>
+</html>
