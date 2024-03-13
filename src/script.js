@@ -6,7 +6,11 @@ const zone = document.getElementById("zone")
 const img = document.getElementById("icon")
 const w = new weather()
 let wInfo = {}
-btn.addEventListener('click', async()=>{
+
+btn.addEventListener('click', updateInfo)
+locInput.addEventListener('keypress', (e)=>{if(e.key == 'Enter'){updateInfo()}})
+
+async function updateInfo(){
     if(locInput.validity.valid && await w.loadInfo(locInput.value)){
         wInfo = w.getData()
         img.setAttribute("src", wInfo.icon)
@@ -25,10 +29,8 @@ btn.addEventListener('click', async()=>{
     }else{
         console.error("Invalid Input")
     }
-})
-function getElement(id){
-    return document.getElementById(id)
 }
+
 function editElement(id, text){
     return document.getElementById(id).textContent = text
 }

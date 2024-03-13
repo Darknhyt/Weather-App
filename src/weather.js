@@ -4,7 +4,7 @@ export function weather(){
     const getData = ()=> {return data}
     async function loadInfo(location){
         try{
-            let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKEY}&q=${location}&days=3`,{mode:'cors'})
+            let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKEY}&q=${location}&days=3`,{mode:'cors'})
             let weather = await response.json()
             data.location = `${weather.location.name} - ${weather.location.country}`
             data.tempC = `${weather.current.temp_c}° C`
